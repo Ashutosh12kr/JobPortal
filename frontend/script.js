@@ -1,3 +1,7 @@
+const API_URL =
+    window.location.hostname === "localhost"
+        ? "http://localhost:5000"
+        : "";
 async function registerUser() {
 
     const name = document.getElementById("name").value;
@@ -13,7 +17,7 @@ async function registerUser() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/register", {
+        const response = await fetch(`${API_URL}/register`, {
             method: "POST",
 
             headers: {
@@ -58,7 +62,7 @@ async function loginUser() {
     try {
     
 
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch(`${API_URL}/login`, {
 
             method: "POST",
 
@@ -116,7 +120,7 @@ async function loginUser() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/jobs"
+           `${API_URL}/jobs`
         );
 
         const jobs = await response.json();
@@ -241,7 +245,7 @@ async function postJob() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/jobs",
+            `${API_URL}/jobs`,
             {
                 method: "POST",
 
@@ -293,7 +297,7 @@ async function applyJob(jobId, jobTitle) {
 
     try {
 
-        const response = await fetch("http://localhost:5000/apply", {
+        const response = await fetch(`${API_URL}/apply`, {
 
             method: "POST",
 
@@ -345,12 +349,11 @@ async function loadApplications() {
     }
 
     try {
+const response = await fetch(
+    `${API_URL}/applications/${encodeURIComponent(email)}`
+);
 
-        const response = await fetch(
-            `http://localhost:5000/applications/${encodeURIComponent(email)}`
-        );
-
-        const applications = await response.json();
+const applications = await response.json();
 
         const container =
             document.getElementById("applicationsContainer");
@@ -408,10 +411,9 @@ async function loadRecruiterApplications() {
 
     try {
 
-        const response = await fetch(
-            "http://localhost:5000/all-applications"
-        );
-
+      const response = await fetch(
+    `${API_URL}/all-applications`
+);
         const applications = await response.json();
 
         const container =
@@ -439,7 +441,7 @@ async function loadRecruiterApplications() {
 
                 resumeButton = `
                    <a
-    href="http://localhost:5000/uploads/${application.resume}"
+    href="${API_URL}/uploads/${application.resume}"
     target="_blank"
     class="resume-btn">
 
@@ -533,12 +535,12 @@ async function deleteApplication(id) {
 
     try {
 
-        const response = await fetch(
-            "http://localhost:5000/delete-application/" + id,
-            {
-                method: "DELETE"
-            }
-        );
+      const response = await fetch(
+    `${API_URL}/delete-application/${id}`,
+    {
+        method: "DELETE"
+    }
+);
 
         const data = await response.json();
 
@@ -572,7 +574,9 @@ async function searchJobs() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/jobs");
+       const response = await fetch(
+    `${API_URL}/jobs`
+);
 
         const jobs = await response.json();
 
@@ -680,7 +684,7 @@ async function updateProfile() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/update-profile/${oldEmail}`,
+           `${API_URL}/update-profile/${oldEmail}`,
             {
                 method: "PUT",
 
@@ -738,7 +742,7 @@ async function saveJob(jobId) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/save-job/${email}/${jobId}`,
+           `${API_URL}/save-job/${email}/${jobId}`,
             {
                 method: "PUT"
             }
@@ -765,13 +769,13 @@ async function loadSavedJobs() {
         return;
     }
 
-    try {
+  try {
 
-        const response = await fetch(
-            `http://localhost:5000/saved-jobs/${email}`
-        );
+    const response = await fetch(
+        `${API_URL}/saved-jobs/${email}`
+    );
 
-        const jobs = await response.json();
+    const jobs = await response.json();
 
         const container =
             document.getElementById("savedJobsContainer");
@@ -833,7 +837,7 @@ async function removeSavedJob(jobId) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/remove-saved-job/${email}/${jobId}`,
+          `${API_URL}/remove-saved-job/${email}/${jobId}`,
             {
                 method: "PUT"
             }
@@ -859,7 +863,7 @@ async function updateApplicationStatus(applicationId, status) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/application-status/${applicationId}`,
+        `${API_URL}/application-status/${applicationId}`,
             {
                 method: "PUT",
                 headers: {
@@ -911,7 +915,7 @@ formData.append("email", email);
     try {
 
         const response = await fetch(
-            "http://localhost:5000/upload-resume",
+        `${API_URL}/upload-resume` ,
             {
                 method: "POST",
                 body: formData
@@ -942,7 +946,7 @@ function viewResume() {
         return;
     }
 
-    fetch("http://localhost:5000/profile/" + email)
+    fetch(`${API_URL}/profile/${email}`)
         .then(response => response.json())
         .then(data => {
 
@@ -950,11 +954,10 @@ function viewResume() {
                 alert("No resume uploaded yet.");
                 return;
             }
-
-            window.open(
-                "http://localhost:5000/uploads/" + data.resume,
-                "_blank"
-            );
+window.open(
+    `${API_URL}/uploads/${data.resume}`,
+    "_blank"
+);
 
         })
         .catch(error => {
@@ -995,7 +998,7 @@ async function uploadChangedResume() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/upload-resume",
+          `${API_URL}/upload-resume` ,
             {
                 method: "POST",
                 body: formData
@@ -1097,7 +1100,7 @@ async function loadPostedJobs() {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/jobs"
+            `${API_URL}/jobs`
         );
 
         const jobs = await response.json();
@@ -1182,7 +1185,7 @@ async function deleteJob(jobId) {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/jobs/${jobId}`,
+         `${API_URL}/jobs/${jobId}`  ,
             {
                 method: "DELETE"
             }
@@ -1274,10 +1277,10 @@ async function updateJob(
 
     try {
 
-        const response = await fetch(
-            `http://localhost:5000/jobs/${jobId}`,
-            {
-                method: "PUT",
+      const response = await fetch(
+    `${API_URL}/jobs/${jobId}`,
+    {
+        method: "PUT",
 
                 headers: {
                     "Content-Type": "application/json"
@@ -1318,8 +1321,8 @@ async function loadDashboardStats() {
     try {
 
         const jobsResponse = await fetch(
-            "http://localhost:5000/jobs"
-        );
+    `${API_URL}/jobs`
+);
 
         const jobs = await jobsResponse.json();
 
@@ -1339,9 +1342,9 @@ async function loadDashboardStats() {
 
     try {
 
-        const applicationsResponse = await fetch(
-            "http://localhost:5000/all-applications"
-        );
+       const applicationsResponse = await fetch(
+    `${API_URL}/all-applications`
+);
 
         const applications =
             await applicationsResponse.json();
