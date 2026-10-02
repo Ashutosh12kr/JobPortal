@@ -35,6 +35,22 @@ app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 console.log("MONGO URI EXISTS:", !!process.env.MONGO_URI);
 
+const dns = require("dns");
+
+dns.lookup("cluster0.lbfkcok.mongodb.net", (error, address) => {
+
+    if (error) {
+
+        console.log("DNS ERROR:", error.message);
+
+    } else {
+
+        console.log("DNS OK:", address);
+
+    }
+
+});
+
 mongoose.connect(process.env.MONGO_URI)
 
     .then(() => {
