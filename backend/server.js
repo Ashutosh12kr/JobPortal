@@ -50,6 +50,26 @@ dns.lookup("ac-v8ayyqv-shard-00-00.lbfkcok.mongodb.net", (error, address) => {
     }
 
 });
+const net = require("net");
+
+const socket = net.createConnection({
+    host: "ac-v8ayyqv-shard-00-00.lbfkcok.mongodb.net",
+    port: 27017
+});
+
+socket.on("connect", () => {
+
+    console.log("MONGO PORT 27017: OPEN");
+
+    socket.destroy();
+
+});
+
+socket.on("error", (error) => {
+
+    console.log("MONGO PORT ERROR:", error.message);
+
+});
 
 mongoose.connect(process.env.MONGO_URI)
 
