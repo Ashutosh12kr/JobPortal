@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Applications - JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="recruiter-page">
+    <script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+
+    <!-- Navbar -->
+
+    <nav class="recruiter-nav">
+
+        <h2>JobPortal</h2>
+
+        <div>
+
+            <a href="index.html">Home</a>
+
+            <a href="recruiter.html">Dashboard</a>
+
+            <a href="#" onclick="logoutUser()">Logout</a>
+           
+
+        </div>
+
+    </nav>
+
+
+    <!-- Applications Section -->
+
+    <section class="recruiter-applications">
+
+        <div class="applications-header">
+
+            <p class="section-label">
+                RECRUITER PORTAL
+            </p>
+
+            <h1>Job Applications</h1>
+
+            <p>
+                Review and manage applications
+                received from job seekers.
+            </p>
+
+        </div>
+
+
+        <div id="recruiterApplications">
+
+            <p class="loading-text">
+                Loading applications...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 JobPortal | Recruiter Portal
+        </p>
+
+        <p>
+            Connecting companies with great talent 🚀
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

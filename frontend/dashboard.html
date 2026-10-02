@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard - JobPortal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+<nav>
+    <h2>JobPortal</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+       <a href="saved-jobs.html">🔖 Saved Jobs</a>
+       <a href="resume.html">📄 Upload Resume</a>
+   <a href="#" onclick="logoutUser()">Logout</a>
+   
+    </div>
+</nav>
+
+<section class="dashboard">
+
+   <h1 id="welcomeMessage">Welcome to JobPortal 👋</h1>
+
+    <p>Find your next opportunity.</p>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>🔍 Find Jobs</h2>
+            <p>Search and explore available jobs.</p>
+           <button onclick="window.location.href='jobs.html'">
+            Find Jobs
+          </button> 
+        </div>
+
+        <div class="dashboard-card">
+            <h2>📄 My Applications</h2>
+            <p>Check the jobs you have applied for.</p>
+           <button onclick="window.location.href='my-applications.html'">
+    My Applications
+</button>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>👤 My Profile</h2>
+            <p>View and update your profile.</p>
+          <button onclick="window.location.href='profile.html'">
+    My Profile
+</button>
+        </div>
+     
+    </div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>

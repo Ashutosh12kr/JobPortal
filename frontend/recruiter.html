@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recruiter Dashboard - JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="recruiter-page">
+   
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+
+    <!-- Navbar -->
+    <nav class="recruiter-nav">
+
+        <h2>JobPortal</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="recruiter-applications.html">Applications</a>
+            <a href="#" onclick="logoutUser()">Logout</a>
+            
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="recruiter-hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                RECRUITER PORTAL
+            </p>
+
+            <h1>
+                Find the right talent<br>
+                for your team.
+            </h1>
+
+            <p>
+                Post job opportunities, manage applications
+                and connect with talented candidates.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="recruiter-dashboard">
+
+        <div class="dashboard-heading">
+
+            <div>
+                <p class="section-label">DASHBOARD</p>
+
+                <h1>Recruiter Dashboard</h1>
+
+                <p>
+                    Create a new opportunity and find your next
+                    great candidate.
+                </p>
+            </div>
+
+        </div>
+        <!-- Dashboard Stats -->
+
+<div class="dashboard-stats">
+
+    <div class="stat-card">
+        <div class="stat-icon">💼</div>
+        <div>
+            <h2 id="totalJobs">0</h2>
+            <p>Total Jobs</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">📋</div>
+        <div>
+            <h2 id="totalApplications">0</h2>
+            <p>Total Applications</p>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div>
+            <h2 id="totalCandidates">0</h2>
+            <p>Total Candidates</p>
+        </div>
+    </div>
+
+</div>
+
+
+        <!-- Dashboard Cards -->
+        <div class="recruiter-cards">
+
+            <div class="recruiter-card">
+
+                <div class="card-icon">💼</div>
+
+                <h3>Post a Job</h3>
+
+                <p>
+                    Create and publish a new job opportunity
+                    for candidates.
+                </p>
+
+            </div>
+
+
+            <div class="recruiter-card">
+
+                <div class="card-icon">📋</div>
+
+                <h3>Applications</h3>
+
+                <p>
+                    View and manage applications received
+                    from job seekers.
+                </p>
+
+                <a href="recruiter-applications.html">
+                    View Applications →
+                </a>
+
+            </div>
+
+
+            <div class="recruiter-card">
+
+                <div class="card-icon">👥</div>
+
+                <h3>Find Talent</h3>
+
+                <p>
+                    Connect with skilled candidates looking
+                    for new opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Post Job Section -->
+        <div class="post-job-section">
+
+            <div class="post-job-header">
+
+                <div>
+                    <p class="section-label">CREATE OPPORTUNITY</p>
+
+                    <h2>Post a New Job</h2>
+
+                    <p>
+                        Enter the job details below to publish
+                        your vacancy.
+                    </p>
+                </div>
+
+                <div class="post-icon">
+                    💼
+                </div>
+
+            </div>
+
+
+            <div class="form-container">
+
+                <div class="input-group">
+
+                    <label>Job Title</label>
+
+                    <input
+                        type="text"
+                        id="jobTitle"
+                        placeholder="e.g. Software Developer"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Company Name</label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. ABC Technologies"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Location</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Greater Noida"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Salary</label>
+
+                    <input
+                        type="text"
+                        id="salary"
+                        placeholder="e.g. ₹5 - ₹8 LPA"
+                    >
+
+                </div>
+                <div class="input-group">
+
+    <label>Job Type</label>
+
+    <select id="jobType">
+
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Internship">Internship</option>
+
+    </select>
+
+</div>
+
+
+<div class="input-group">
+
+    <label>Work Mode</label>
+
+    <select id="workMode">
+
+        <option value="On-site">On-site</option>
+        <option value="Remote">Remote</option>
+        <option value="Hybrid">Hybrid</option>
+
+    </select>
+
+</div>
+
+
+                <div class="input-group full-width">
+
+                    <label>Job Description</label>
+
+                    <textarea
+                        id="description"
+                        placeholder="Describe the role, responsibilities, skills and requirements..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    class="post-job-btn"
+                    onclick="postJob()"
+                >
+                    🚀 Publish Job
+                </button>
+
+                <p id="jobMessage"></p>
+
+            </div>
+
+        </div>
+  <!-- My Posted Jobs -->
+
+        <div class="posted-jobs-section">
+
+            <h2>My Posted Jobs</h2>
+
+            <div id="postedJobs">
+                <p>Loading jobs...</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 JobPortal | Recruiter Portal
+        </p>
+
+        <p>
+            Connecting companies with great talent 🚀
+        </p>
+
+    </footer>
+
+
+   <script src="script.js"></script>
+
+<script>
+   
+    loadDashboardStats();
+</script>
+
+</body>
+
+</html>

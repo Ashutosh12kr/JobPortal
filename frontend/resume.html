@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+<nav>
+    <h2>JobPortal</h2>
+
+    <div>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="jobs.html">Find Jobs</a>
+       
+    </div>
+</nav>
+
+<section class="jobs-page">
+
+    <h1>Upload Your Resume</h1>
+
+    <form id="resumeForm" onsubmit="event.preventDefault(); uploadResume();">
+
+    <input 
+        type="file" 
+        id="resume" 
+        name="resume" 
+        accept=".pdf,.doc,.docx" 
+        required 
+    >
+
+    <br><br>
+
+    <button type="submit">
+        Upload Resume
+    </button>
+
+</form>
+
+    <p id="resumeMessage"></p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

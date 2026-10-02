@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - JobPortal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+ 
+<nav>
+    <h2>JobPortal</h2>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </div>
+</nav>
+
+<div class="form-container">
+
+    <h1>Create Account</h1>
+
+    <input type="text" id="name" placeholder="Full Name">
+
+    <input type="email" id="email" placeholder="Email">
+
+  <div class="password-box">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+    >
+
+    <button
+        type="button"
+        id="registerEye"
+        class="eye-button"
+        onclick="togglePassword('password', 'registerEye')"
+    >
+        👁️
+    </button>
+
+</div>
+
+
+    <select id="role">
+        <option value="">Select Role</option>
+        <option value="Job Seeker">Job Seeker</option>
+        <option value="Recruiter">Recruiter</option>
+    </select>
+
+    <button onclick="registerUser()">Register</button>
+
+    <p id="message"></p>
+
+    <p>
+        Already have an account?
+        <a href="login.html">Login</a>
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

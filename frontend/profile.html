@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Profile - JobPortal</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+</script>
+<nav>
+
+    <h2>JobPortal</h2>
+
+    <div>
+
+        <a href="index.html">Home</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="jobs.html">Find Jobs</a>
+       
+
+    </div>
+
+</nav>
+
+
+<section class="profile-page">
+
+
+    <!-- Profile Information -->
+
+    <div class="profile-card">
+
+        <div class="profile-icon">
+            👤
+        </div>
+
+        <h1>My Profile</h1>
+
+        <div class="profile-info">
+
+            <div>
+
+                <span>Name</span>
+
+                <strong id="profileDisplayName">
+                    Not available
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>Email</span>
+
+                <strong id="profileDisplayEmail">
+                    Not available
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>Role</span>
+
+                <strong id="profileDisplayRole">
+                    Not available
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <button onclick="showEditProfile()">
+
+            ✏️ Edit Profile
+
+        </button>
+
+    </div>
+
+
+
+    <!-- Resume Section -->
+
+    <div class="profile-card">
+
+        <h2>📄 My Resume</h2>
+
+        <p id="resumeStatus">
+            No resume uploaded
+        </p>
+
+
+        <button onclick="viewResume()">
+
+            👁️ View Resume
+
+        </button>
+
+
+        <button onclick="changeResume()">
+
+            🔄 Change Resume
+
+        </button>
+
+
+        <input
+            type="file"
+            id="changeResumeFile"
+            accept=".pdf,.doc,.docx"
+            style="display: none;"
+            onchange="uploadChangedResume()"
+        >
+
+    </div>
+
+
+
+    <!-- Edit Profile Form -->
+
+    <div
+        class="profile-card edit-profile-card"
+        id="editProfileBox"
+        style="display: none;"
+    >
+
+        <h2>Edit Profile</h2>
+
+
+        <input
+            type="text"
+            id="profileName"
+            placeholder="Enter your name"
+        >
+
+
+        <input
+            type="email"
+            id="profileEmail"
+            placeholder="Enter your email"
+        >
+
+
+        <button onclick="updateProfile()">
+
+            Update Profile
+
+        </button>
+
+
+        <p id="profileMessage"></p>
+
+    </div>
+
+
+</section>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background: #0f172a;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 24px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+    text-decoration: none;
+}
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(51, 65, 85, 0.55),
+            rgba(71, 85, 105, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 650px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px auto;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* Jobs */
+.jobs,
+.jobs-page {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.jobs h2,
+.jobs-page h1 {
+    margin-bottom: 25px;
+}
+
+/* Job Card */
+.job-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.job-card h2,
+.job-card h3 {
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    margin: 8px 0;
+}
+
+/* Forms */
+.form-container {
+    background: white;
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h1,
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-container button {
+    width: 100%;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 50px;
+    text-align: center;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.dashboard-card {
+    background: white;
+    width: 280px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    margin-bottom: 20px;
+}
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+/* Profile Page */
+
+.profile-page {
+    min-height: 80vh;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: white;
+    width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.profile-card h1 {
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.profile-info div {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info span {
+    display: block;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.profile-info strong {
+    font-size: 17px;
+}
+
+.profile-card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.edit-profile-card h2 {
+    margin-bottom: 25px;
+}
+
+.edit-profile-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#profileMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* ============================= */
+/* PROFESSIONAL RECRUITER PAGE */
+/* ============================= */
+
+.recruiter-page {
+    background: #f1f5f9;
+}
+
+
+/* Recruiter Navbar */
+
+.recruiter-nav {
+    background: #0f172a;
+    padding: 18px 50px;
+}
+
+.recruiter-nav h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.recruiter-nav a {
+    color: #e2e8f0;
+    transition: 0.3s;
+}
+
+.recruiter-nav a:hover {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+
+/* Hero */
+
+.recruiter-hero {
+    min-height: 400px;
+
+    background:
+        linear-gradient(
+            rgba(15, 23, 42, 0.82),
+            rgba(30, 41, 59, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero-small {
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:last-child {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+
+/* Dashboard */
+
+.recruiter-dashboard {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px;
+}
+
+.dashboard-heading {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.dashboard-heading h1 {
+    font-size: 36px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.dashboard-heading p {
+    color: #64748b;
+}
+
+
+/* Dashboard Cards */
+
+.recruiter-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 60px;
+}
+
+.recruiter-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.07);
+
+    transition: 0.3s;
+}
+
+.recruiter-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.recruiter-card h3 {
+    font-size: 21px;
+    color: #0f172a;
+
+    margin-bottom: 12px;
+}
+
+.recruiter-card p {
+    color: #64748b;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+.recruiter-card a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.recruiter-card a:hover {
+    color: #1d4ed8;
+}
+
+
+/* Post Job Section */
+
+.post-job-section {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08);
+
+    border: 1px solid #e2e8f0;
+}
+
+.post-job-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.post-job-header h2 {
+    font-size: 30px;
+
+    color: #0f172a;
+
+    margin-bottom: 8px;
+}
+
+.post-job-header p {
+    color: #64748b;
+}
+
+.post-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 16px;
+
+    background: #eff6ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+
+/* Form */
+
+.post-job-section .form-container {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-shadow: none;
+
+    background: transparent;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+}
+
+.post-job-section .form-container input,
+.post-job-section .form-container textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.post-job-section .form-container input:focus,
+.post-job-section .form-container textarea:focus {
+    border-color: #2563eb;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.post-job-section textarea {
+    min-height: 140px;
+
+    resize: vertical;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* Publish Button */
+
+.post-job-btn {
+    grid-column: 1 / -1;
+
+    width: 220px;
+
+    padding: 14px 25px;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.post-job-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+#jobMessage {
+    grid-column: 1 / -1;
+
+    font-weight: bold;
+
+    margin-top: 5px;
+}
+
+
+/* Recruiter Footer */
+
+.recruiter-page footer {
+    background: #0f172a;
+
+    margin-top: 0;
+}
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    .recruiter-nav {
+        padding: 18px 20px;
+    }
+
+    .recruiter-hero {
+        padding: 60px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .recruiter-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .post-job-section {
+        padding: 25px;
+    }
+
+    .post-job-section .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .post-job-btn {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+}
+/* ============================= */
+/* RECRUITER APPLICATIONS PAGE */
+/* ============================= */
+
+.recruiter-applications {
+    background: #f1f5f9;
+    min-height: 75vh;
+    padding: 70px 8%;
+}
+
+.applications-header {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.applications-header h1 {
+    font-size: 38px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.applications-header p:last-child {
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* Application Cards */
+
+#recruiterApplications {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+#recruiterApplications .job-card {
+    background: white;
+    padding: 28px;
+    margin: 0;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+    transition: 0.3s;
+}
+
+#recruiterApplications .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+#recruiterApplications .job-card h2 {
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+#recruiterApplications .job-card p {
+    color: #64748b;
+    margin: 10px 0;
+}
+
+
+/* Buttons */
+
+#recruiterApplications button {
+    margin-top: 15px;
+    margin-right: 8px;
+    background: #2563eb;
+}
+
+#recruiterApplications button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Loading */
+
+.loading-text {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .recruiter-applications {
+        padding: 50px 20px;
+    }
+
+    #recruiterApplications {
+        grid-template-columns: 1fr;
+    }
+
+    .applications-header h1 {
+        font-size: 32px;
+    }
+
+}
+/* ============================= */
+/* RECRUITER BUTTONS */
+/* ============================= */
+
+.recruiter-page button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Publish Job */
+
+.post-job-btn {
+    background: #475569 !important;
+    color: white;
+}
+
+.post-job-btn:hover {
+    background: #334155 !important;
+}
+
+/* Shortlist */
+
+.shortlist-btn {
+    background: #475569 !important;
+    color: white;
+}
+
+.shortlist-btn:hover {
+    background: #334155 !important;
+}
+
+/* Reject */
+
+.reject-btn {
+    background: #475569 !important;
+    color: white;
+}
+
+.reject-btn:hover {
+    background: #334155 !important;
+}
+
+
+/* Delete Application */
+
+.delete-btn {
+    background: #0f172a !important;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #1e293b !important;
+}
+
+
+/* Delete Job */
+
+.delete-job-btn {
+    background: #0f172a !important;
+    color: white;
+}
+
+.delete-job-btn:hover {
+    background: #1e293b !important;
+}
+
+
+/* View Resume */
+
+.resume-btn {
+    background: #e2e8f0 !important;
+    color: #0f172a !important;
+}
+
+.resume-btn:hover {
+    background: #cbd5e1 !important;
+}
+/* ============================= */
+/* JOBS PAGE BUTTONS */
+/* ============================= */
+
+.jobs-page .job-card button {
+    background: #475569 !important;
+    color: white;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.jobs-page .job-card button:hover {
+    background: #334155 !important;
+    transform: translateY(-2px);
+}
+/* ============================= */
+/* JOB SEARCH BUTTON */
+/* ============================= */
+
+.search-box button {
+    background: #475569 !important;
+    color: white;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #334155 !important;
+    transform: translateY(-2px);
+}
+/* ============================= */
+/* HOME PAGE BUTTONS */
+/* ============================= */
+
+body:not(.recruiter-page) button {
+    background: #475569 !important;
+    color: white;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+body:not(.recruiter-page) button:hover {
+    background: #334155 !important;
+    transform: translateY(-2px);
+}
+
+
+/* Home Search Button */
+
+body:not(.recruiter-page) .search-box button {
+    background: #475569 !important;
+}
+
+body:not(.recruiter-page) .search-box button:hover {
+    background: #334155 !important;
+}
+/* ============================= */
+/* HOME FEATURED JOB CARDS */
+/* ============================= */
+
+.jobs {
+    background: #f1f5f9;
+    padding: 60px 8%;
+    max-width: 100%;
+}
+
+.jobs h2 {
+    color: #0f172a;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+
+/* Job Card */
+
+.jobs .job-card {
+    background: white;
+    padding: 28px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    transition: 0.3s;
+}
+
+.jobs .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Job Title */
+
+.jobs .job-card h3 {
+    color: #0f172a;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+
+/* Company & Location */
+
+.jobs .job-card p {
+    color: #64748b;
+    margin: 8px 0;
+}
+
+
+/* Button */
+
+.jobs .job-card button {
+    background: #2563eb !important;
+    color: white;
+    margin-top: 15px;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.jobs .job-card button:hover {
+    background: #1d4ed8 !important;
+    transform: translateY(-2px);
+}
+/* ============================= */
+/* FEATURED JOBS GRID */
+/* ============================= */
+
+.jobs {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.jobs .job-card {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 15px);
+    margin-right: 15px;
+    min-height: 230px;
+}
+
+
+/* Second card spacing */
+
+.jobs .job-card:nth-child(even) {
+    margin-right: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .jobs .job-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+}
+/* Home - View Job Button */
+
+.jobs .job-card button {
+    background: #475569 !important;
+    color: white !important;
+    border: none;
+}
+
+.jobs .job-card button:hover {
+    background: #334155 !important;
+}
+/* ============================= */
+/* RECRUITER DASHBOARD STATS */
+/* ============================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: #0f172a;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   GLOBAL DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+body.dark-mode .form-container {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .form-container h1,
+body.dark-mode .form-container p {
+    color: white;
+}
+
+body.dark-mode .form-container a {
+    color: #60a5fa;
+}
+
+body.dark-mode .form-container input {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode .form-container input::placeholder {
+    color: #bbb;
+}
+
+body.dark-mode nav {
+    background: #1e1e1e;
+}
+
+body.dark-mode nav h2,
+body.dark-mode nav a {
+    color: white;
+}
+
+body.dark-mode .form-container,
+body.dark-mode .job-card,
+body.dark-mode .dashboard-card,
+body.dark-mode .profile-card,
+body.dark-mode .stat-card,
+body.dark-mode .recruiter-card,
+body.dark-mode .post-job-section {
+    background: #1e1e1e;
+    color: white;
+    border-color: #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color: white;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #bbb;
+}
+
+body.dark-mode .recruiter-page,
+body.dark-mode .recruiter-applications,
+body.dark-mode .jobs,
+body.dark-mode .jobs-page,
+body.dark-mode .dashboard,
+body.dark-mode .profile-page {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode footer {
+    background: #1e1e1e;
+    color: white;
+}
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode nav {
+    background: #1e1e1e !important;
+}
+
+body.dark-mode nav h2,
+body.dark-mode nav a {
+    color: white !important;
+}
+
+body.dark-mode .form-container,
+body.dark-mode .job-card,
+body.dark-mode .dashboard-card,
+body.dark-mode .profile-card,
+body.dark-mode .stat-card,
+body.dark-mode .recruiter-card,
+body.dark-mode .post-job-section {
+    background: #1e1e1e !important;
+    color: white !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+    color: white !important;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #bbb !important;
+}
+
+body.dark-mode footer {
+    background: #1e1e1e !important;
+    color: white !important;
+}
+/* Recruiter Dark Mode */
+
+body.dark-mode .recruiter-page {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .recruiter-page h1,
+body.dark-mode .recruiter-page h2,
+body.dark-mode .recruiter-page h3,
+body.dark-mode .recruiter-page p,
+body.dark-mode .recruiter-page label {
+    color: white !important;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .recruiter-card,
+body.dark-mode .post-job-section,
+body.dark-mode .job-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .stat-card h2,
+body.dark-mode .stat-card p {
+    color: white !important;
+}
+
+body.dark-mode .post-job-section input,
+body.dark-mode .post-job-section select,
+body.dark-mode .post-job-section textarea {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+/* =========================
+   RECRUITER DASHBOARD DARK MODE
+========================= */
+
+body.dark-mode .recruiter-dashboard {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .dashboard-heading h1 {
+    color: white !important;
+}
+
+body.dark-mode .dashboard-heading p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .section-label {
+    color: #38bdf8 !important;
+}
+
+body.dark-mode .dashboard-stats {
+    background: #121212 !important;
+}
+
+body.dark-mode .stat-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .stat-card h2 {
+    color: white !important;
+}
+
+body.dark-mode .stat-card p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .stat-icon {
+    background: #2a2a2a !important;
+}
+
+body.dark-mode .recruiter-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .recruiter-card h3 {
+    color: white !important;
+}
+
+body.dark-mode .recruiter-card p {
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .post-job-section {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .post-job-header h2 {
+    color: white !important;
+}
+
+body.dark-mode .post-job-header p {
+    color: #cbd5e1 !important;
+}
+/* Recruiter Applications - Dark Mode */
+
+body.recruiter-page.dark-mode .recruiter-applications {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.recruiter-page.dark-mode .applications-header h1 {
+    color: white !important;
+}
+
+body.recruiter-page.dark-mode .applications-header p {
+    color: #cbd5e1 !important;
+}
+
+body.recruiter-page.dark-mode #recruiterApplications .job-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.recruiter-page.dark-mode #recruiterApplications .job-card h2 {
+    color: white !important;
+}
+
+body.recruiter-page.dark-mode #recruiterApplications .job-card p {
+    color: #cbd5e1 !important;
+}
+
+body.recruiter-page.dark-mode footer {
+    background: #1e1e1e !important;
+    color: white !important;
+}
+/* Jobs Page - Dark Mode */
+
+body.dark-mode .jobs-page {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .jobs-page h1,
+body.dark-mode .jobs-page h2,
+body.dark-mode .jobs-page h3,
+body.dark-mode .jobs-page p {
+    color: white !important;
+}
+
+body.dark-mode .search-box {
+    background: #1e1e1e !important;
+}
+
+body.dark-mode .search-box input {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode .job-filters select {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode #jobsContainer .job-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode #jobsContainer .job-card h2,
+body.dark-mode #jobsContainer .job-card h3,
+body.dark-mode #jobsContainer .job-card p {
+    color: white !important;
+}
+/* Saved Jobs - Dark Mode */
+
+body.dark-mode .saved-jobs-page {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .saved-jobs-page h1,
+body.dark-mode .saved-jobs-page h2,
+body.dark-mode .saved-jobs-page h3,
+body.dark-mode .saved-jobs-page p {
+    color: white !important;
+}
+
+body.dark-mode #savedJobsContainer .job-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode #savedJobsContainer .job-card h2,
+body.dark-mode #savedJobsContainer .job-card h3,
+body.dark-mode #savedJobsContainer .job-card p {
+    color: white !important;
+}
+/* Resume Page - Dark Mode */
+
+body.dark-mode .resume-page {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .resume-page h1,
+body.dark-mode .resume-page h2,
+body.dark-mode .resume-page h3,
+body.dark-mode .resume-page p,
+body.dark-mode .resume-page label {
+    color: white !important;
+}
+
+body.dark-mode .resume-page .form-container,
+body.dark-mode .resume-page .resume-container {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .resume-page input {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+/* My Profile - Dark Mode */
+
+body.dark-mode .profile-page {
+    background: #121212 !important;
+    color: white !important;
+}
+
+body.dark-mode .profile-page h1,
+body.dark-mode .profile-page h2,
+body.dark-mode .profile-page h3,
+body.dark-mode .profile-page p,
+body.dark-mode .profile-page label {
+    color: white !important;
+}
+
+body.dark-mode .profile-card {
+    background: #1e1e1e !important;
+    color: white !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .profile-card input {
+    background: #2a2a2a !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+}
+
+body.dark-mode .profile-card input::placeholder {
+    color: #bbb !important;
+}
+/* Fixed Password Eye Button */
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+.password-box .eye-button {
+    position: absolute !important;
+  right: 5px !important;
+    top: 40% !important;
+    transform: translateY(-50%) !important;
+
+    width: 35px !important;
+    height: 35px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: #333 !important;
+    font-size: 18px !important;
+
+    cursor: pointer;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Mouse le jaane par bhi move nahi karega */
+.password-box .eye-button:hover {
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.password-box .eye-button:focus {
+    transform: translateY(-50%) !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.password-box .eye-button:active {
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+}
+/* Password Eye Button */
+
+.password-box {
+    position: relative;
+    width: 100%;
+}
+
+.password-box input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+.password-box .eye-button {
+    position: absolute !important;
+    right: 5px !important;
+    top: 40% !important;
+    transform: translateY(-50%) !important;
+
+    width: 35px !important;
+    height: 35px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    color: #333 !important;
+    font-size: 18px !important;
+
+    cursor: pointer;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.password-box .eye-button:hover {
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.password-box .eye-button:focus {
+    transform: translateY(-50%) !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.password-box .eye-button:active {
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+}
