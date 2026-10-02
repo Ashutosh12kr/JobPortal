@@ -33,17 +33,13 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
-mongoose.connect(process.env.MONGO_URI, {
-    serverSelectionTimeoutMS: 10000
-})
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("MongoDB Connected Successfully");
     })
     .catch((error) => {
-        console.log("MongoDB Connection Error:");
-        console.log(error.message);
+        console.log("MONGO ERROR:", error.message);
     });
-
 // Home page
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/index.html"));
