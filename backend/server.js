@@ -33,12 +33,20 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
+console.log("MONGO URI EXISTS:", !!process.env.MONGO_URI);
+
 mongoose.connect(process.env.MONGO_URI)
+
     .then(() => {
+
         console.log("MongoDB Connected Successfully");
+
     })
+
     .catch((error) => {
+
         console.log("MONGO ERROR:", error.message);
+
     });
 // Home page
 app.get("/", (req, res) => {
