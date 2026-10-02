@@ -71,7 +71,10 @@ socket.on("error", (error) => {
 
 });
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, {
+    serverSelectionTimeoutMS: 10000,
+    tls: true
+})
 
     .then(() => {
 
