@@ -37,15 +37,15 @@ console.log("MONGO URI EXISTS:", !!process.env.MONGO_URI);
 
 const dns = require("dns");
 
-dns.lookup("cluster0.lbfkcok.mongodb.net", (error, address) => {
+dns.lookup("ac-v8ayyqv-shard-00-00.lbfkcok.mongodb.net", (error, address) => {
 
     if (error) {
 
-        console.log("DNS ERROR:", error.message);
+        console.log("NODE DNS ERROR:", error.message);
 
     } else {
 
-        console.log("DNS OK:", address);
+        console.log("NODE DNS OK:", address);
 
     }
 
